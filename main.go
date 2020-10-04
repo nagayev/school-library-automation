@@ -16,7 +16,7 @@ func indexOf(val string,arr [8]string)int{ //возвращает индекс �
 }
 
 func main(){
-	f, _ := excelize.OpenFile("tanya.xlsx") //открываем таблицу
+	f, _ := excelize.OpenFile("list.xlsx") //открываем таблицу
 	var books [8] string; //названия книг
 	var values [8] int64; //кол-во книг
 	for i:=0; i<8; i++{
@@ -53,5 +53,5 @@ func main(){
 		cell:=fmt.Sprintf("B%d",i+3)
 		f.SetCellValue("Лист4",cell,values[i])
 	}
-	f.SaveAs("tanya1.xlsx")
+	f.SaveAs("list_edit.xlsx")
 }
